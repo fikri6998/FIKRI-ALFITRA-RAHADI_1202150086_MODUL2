@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //melakukan inisiasi berdasarkan id yang ada di layout mulai dari button samapai radio button
+
         mPesansekarang = (Button) findViewById(R.id.buttonPesan);
 
         mPilihMakanan = (RadioGroup) findViewById(R.id.pilihMakanan);
@@ -28,11 +30,12 @@ public class MainActivity extends AppCompatActivity {
 
         mTakeAway = (RadioButton) findViewById(R.id.takeAway);
 
-
+        //menampilkan pesan berisikan Nama_NIM
         Toast.makeText(this,"FIKRI ALFITRA RAHADI_1202150086",
                 Toast.LENGTH_SHORT).show();
     }
 
+    //jika kita memasang onclick pada button dan agar dapat membuat tombol mempunyai aksi
     public void LaunchPilih(View view) {
 
         mPilihMakanan = (RadioGroup) findViewById(R.id.pilihMakanan);
@@ -47,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
     public void LaunchPesan(View view) {
 
             int PilihMakanan = mPilihMakanan.getCheckedRadioButtonId();
+
+            //mengecek button apa yg di klik
             switch (PilihMakanan){
                 case R.id.takeAway:
                     Toast.makeText(this,"Take Away",Toast.LENGTH_SHORT).show();

@@ -18,13 +18,15 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(icicle);
         setContentView(R.layout.activity_splash);
 
-
+        //memungkinkan anda untuk mengirim atau memproses objek message disini kasusnya adalah menampilkan toast setelah muncul
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
+                //melakukan intent ke menu selanjutnya setelah splash screen sudah muncul
                 Intent mainIntent = new Intent(SplashActivity.this, MainActivity.class);
                 SplashActivity.this.startActivity(mainIntent);
+                //jeda selesai Splashscreen
                 SplashActivity.this.finish();
 
             }
